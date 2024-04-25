@@ -38,7 +38,7 @@ It's important to note that `vis.gl/react-google-maps` requires a valid Google M
 
 Although `vis.gl/react-google-maps` is a compelling choice for integrating Google Maps with React, it's important to acknowledge that other popular libraries exist. One such alternative is `google-maps-react`, offering a familiar approach for developers accustomed to working with Google Maps APIs.
 
-Regardless of which library you select, make sure it aligns with your project's requirements and your development preferences. In this article, we'll focus on utilizing `vis.gl/react-google-maps` for consistency.
+Regardless of which library you select, make sure it aligns with your project's requirements and your development preferences. In this article, we'll focus on using `vis.gl/react-google-maps` for consistency.
 
 ## Get Started
 
@@ -69,7 +69,7 @@ Regardless of which library you select, make sure it aligns with your project's 
     npm install @vis.gl/react-google-maps
     ```
     
-    This installs the `@vis.gl/react-google-maps` library, allowing you to integrate Google Maps into your React application. This module comes with full TypeScript-support out of the box, so no additional module is required for the typings.
+    This installs the `vis.gl/react-google-maps` library, allowing you to integrate Google Maps into your React application. This module comes with full TypeScript-support out of the box, so no additional module is required for the typings.
     
 3. **(Optional) Install Tailwind CSS:**
     
@@ -93,17 +93,17 @@ Regardless of which library you select, make sure it aligns with your project's 
 
 ## Obtaining Google Maps API key
 
-To utilize Google Maps functionality within your React application, you'll need to obtain an [API key](https://developers.google.com/maps/documentation/javascript/get-api-key) from the Google Cloud Platform (GCP). They have several API’s to use with the Maps API but for now, we’ll need just the `Maps Javascript API` to get started for the map. So ensure that the `Maps Javascript API` is enabled in your console.
+To use Google Maps features within your React application, you'll need to obtain an [API key](https://developers.google.com/maps/documentation/javascript/get-api-key) from the Google Cloud Platform (GCP). They have several API’s to use with the Maps API but for now, we’ll need just the `Maps Javascript API` to get started for the map. So ensure that the `Maps Javascript API` is enabled in your console.
 
 **Steps to Acquire an API Key:**
 
-1. **Create or Access a GCP Project:** If you don't have an existing project, create one on the GCP Console ([https://cloud.google.com/).](https://cloud.google.com/)
+1. **Create or Access a GCP Project:** If you don't have an existing project, create one on the [GCP Console](https://console.cloud.google.com/google/maps-apis/start).
     
-2. **Enable Required APIs:** Navigate to the "APIs & Services" section in the GCP Console and enable the following APIs for your project:
+2. **Enable Required APIs:** Navigate to the "APIs & Services" section in the **Google Maps Platform** and enable the following APIs for your project:
     
     * **Maps JavaScript API**
         
-3. **Create an API Key:** In the "Credentials" section of the GCP Console, create a new API key. Consider restricting this key to only allow usage for your specific project for better security.
+3. **Create an API Key:** In the "Credentials" section of the **Google Maps Platform**, create a new API key. Consider restricting this key to only allow usage for your specific project for better security.
     
 
 **Never commit your API key to a public repository** like Github. Instead, create a `.env.local` file in your project's root directory and add the following line, replacing `<your API key here>` with your actual key:
@@ -124,11 +124,11 @@ In this section, I'll walk you through rendering a simple Google Map in your Rea
     
     We import the `APIProvider` and `Map` components from the library.
     
-2. **Set Up the**`App`**Component:**
+2. **Set Up the** `App` **Component:**
     
     ```typescript
     const App = () => (
-      <APIProvider apiKey={import.meta.env.VITE_API_KEY}>
+      <APIProvider apiKey={import.meta.env.VITE_REACT_GOOGLE_MAPS_API_KEY}>
         <Map
           style={{ width: '100vw', height: '100vh' }}
           defaultCenter={{ lat: 22.54992, lng: 0 }}
@@ -176,7 +176,7 @@ The code snippet below demonstrates how to add an `InfoWindow` with the content 
 import { APIProvider, InfoWindow, Map } from "@vis.gl/react-google-maps";
 
 const App = () => (
-  <APIProvider apiKey={import.meta.env.VITE_API_KEY}>
+  <APIProvider apiKey={import.meta.env.VITE_REACT_GOOGLE_MAPS_API_KEY}>
     <Map
       style={{ width: "100vw", height: "100vh" }}
       defaultCenter={{ lat: 53.54992, lng: 10.00678 }}
@@ -202,7 +202,7 @@ With these components in place, our application should render a map with an info
 
 The `Marker` component is a part of the Google Maps API provided by the `@`[`vis.gl/react-google-maps`](http://vis.gl/react-google-maps) package, enabling you to place markers on the map to indicate specific points of interest or locations.
 
-While `InfoWindows` provide details, markers visually represent points of interest on the map. You can use the `Marker` component from `visgl/react-google-maps` to add markers. The usage is similar to `InfoWindows`, with a `position` prop and optional customization options like icons.
+While `InfoWindows` provide details, markers visually represent points of interest on the map. You can use the `Marker` component from `vis.gl/react-google-maps` to add markers. The usage is similar to `InfoWindows`, with a `position` prop and optional customization options like icons.
 
 The code snippet below demonstrates adding a basic marker at specific coordinates:
 
@@ -210,7 +210,7 @@ The code snippet below demonstrates adding a basic marker at specific coordinate
 import { APIProvider, Map, Marker } from "@vis.gl/react-google-maps";
 
 const App = () => (
-  <APIProvider apiKey={import.meta.env.VITE_API_KEY}>
+  <APIProvider apiKey={import.meta.env.VITE_REACT_GOOGLE_MAPS_API_KEY}>
     <Map
       style={{ width: "100vw", height: "100vh" }}
       defaultCenter={{ lat: 53.54992, lng: 10.00678 }}
@@ -234,9 +234,9 @@ With our components in place, our application should render a map with a single 
 
 The `AdvancedMarker` component provides a more customizable alternative to the standard `Marker` component.
 
-The `AdvancedMarker` component allows for extensive customization of the marker's appearance and behavior. Developers can apply custom styles, including complex layouts, backgrounds, borders, and shadows, to the marker using JSX/TSX, CSS classes or inline styles.
+The `AdvancedMarker` component allows for extensive customization of the marker's appearance and behavior. You can apply custom styles, including complex layouts, backgrounds, borders, and shadows, to the marker using JSX/TSX, CSS classes or inline styles.
 
-To use the `AdvancedMarker` component, it is necessary to add a custom `mapId` to the map options. The `mapId` prop in the `Map` component specifies the ID of the Google Map being rendered. This prop is particularly useful when working with styled maps or when multiple maps are present on the same page.
+To use the `AdvancedMarker` component, it is necessary to add a custom `mapId` to the map options. [The `mapId` prop in the `Map` component specifies the ID of the Google Map being rendered.](https://developers.google.com/maps/documentation/get-map-id#:~:text=Create%20a%20map%20ID,-A%20map%20ID&text=You%20can%20create%20map%20IDs,Create%20New%20Map%20ID%20form.) This prop is particularly useful when working with styled maps or when multiple maps are present on the same page.
 
 This example renders an `AdvancedMarker` with custom styles and an SVG element:
 
@@ -244,7 +244,7 @@ This example renders an `AdvancedMarker` with custom styles and an SVG element:
 import { APIProvider, AdvancedMarker, Map } from "@vis.gl/react-google-maps";
 
 const App = () => (
-  <APIProvider apiKey={import.meta.env.VITE_API_KEY}>
+  <APIProvider apiKey={import.meta.env.VITE_REACT_GOOGLE_MAPS_API_KEY}>
     <Map
       style={{ width: "100vw", height: "100vh" }}
       defaultCenter={{ lat: 53.54992, lng: 10.00678 }}
@@ -308,7 +308,7 @@ const MyComponent = () => {
   }, [map]);
 
   return (
-    <APIProvider apiKey={import.meta.env.VITE_API_KEY}>
+    <APIProvider apiKey={import.meta.env.VITE_REACT_GOOGLE_MAPS_API_KEY}>
      <Map
        style={{ width: '100vw', height: '100vh' }}
        gestureHandling={'greedy'}
@@ -349,7 +349,7 @@ const MyComponent = () => {
   }, [placesService]);
 
   return (
-    <APIProvider apiKey={import.meta.env.VITE_API_KEY}>
+    <APIProvider apiKey={import.meta.env.VITE_REACT_GOOGLE_MAPS_API_KEY}>
      <Map
        style={{ width: '100vw', height: '100vh' }}
        gestureHandling={'greedy'}
@@ -362,7 +362,7 @@ const MyComponent = () => {
 
 # **Conclusion**
 
-This article has equipped you with the foundation to integrate Google Maps functionality into your React applications using `vis.gl/react-google-maps`. We've covered:
+Hopefully, this article has equipped you with the foundation to integrate Google Maps into your React applications using `vis.gl/react-google-maps`. We've covered:
 
 * Setting up a React project with the necessary dependencies.
     
@@ -372,12 +372,12 @@ This article has equipped you with the foundation to integrate Google Maps funct
     
 * Adding interactive elements like markers and info windows for points of interest.
     
-* Utilizing `AdvancedMarker` for better marker customization.
+* Using `AdvancedMarker` for better marker customization.
     
 * Leveraging map hooks (`useMap` and `useMapLibrary`) for programmatic control and additional map libraries integration.
     
 
-By effectively combining the power of Google Maps with the flexibility of React and the utilities provided by `visgl/react-google-maps`, you can create dynamic and informative map experiences within your React applications.
+By effectively combining the power of Google Maps with the flexibility of React and the utilities provided by `vis.gl/react-google-maps`, you can create dynamic and informative map experiences within your React applications.
 
 It's really important to consider error handling mechanisms in your React applications, especially when interacting with external APIs like Google Maps.
 
@@ -386,8 +386,12 @@ It's really important to consider error handling mechanisms in your React applic
 <div data-node-type="callout-text"><strong>Important Note: </strong>The <code>vis.gl/react-google-maps</code> library is currently in its alpha phase. This means it's still under active development, and features or behaviors might change in future releases. Be prepared for potential issues and occasional breaking changes.</div>
 </div>
 
-This is just the beginning! The Google Maps Platform offers a vast array of functionalities beyond what we've covered here. Explore the official [Google Maps documentation](https://developers.google.com/maps/documentation) to learn more about features like geocoding, directions, and more. Also, the `vis.gl/react-google-maps` library offers more components like `MapControl` and `Pin`, and other hooks like the `useApiIsLoaded()` and `useApiLoadingStatus()` hooks. Refer to [their documentation](https://github.com/visgl/react-google-maps) to explore more. [https://www.youtube.com/playlist?list=PL2rFahu9sLJ2QuJaKKYDaJp0YqjFCDCtN](https://www.youtube.com/playlist?list=PL2rFahu9sLJ2QuJaKKYDaJp0YqjFCDCtN)
+This is just the beginning! The Google Maps Platform offers a vast array of functionalities beyond what we've covered here. Explore the official [Google Maps documentation](https://developers.google.com/maps/documentation) to learn more about features like geocoding, directions, and more. Also, the `vis.gl/react-google-maps` library offers more components like `MapControl` and `Pin`, and other hooks like the `useApiIsLoaded()` and `useApiLoadingStatus()` hooks. You should refer to [their documentation](https://github.com/visgl/react-google-maps) to learn how they work. Another resource I recommend you to check out is this [Youtube Playlist](https://www.youtube.com/playlist?list=PL2rFahu9sLJ2QuJaKKYDaJp0YqjFCDCtN) from the Google Maps Platform team.
 
-While `vis.gl/react-google-maps` is still in its early stages, I believe it has a lot of potential. Backed by a talented internal team and a growing community of open-source contributors, the library is poised for significant development. I'm excited to see what new features and functionalities get included in upcoming releases!
+While `vis.gl/react-google-maps` is still in its early stages, I believe it has a lot of potential. Backed by a talented internal team and a growing community of open-source contributors, the library is definitely poised for significant development. I'm excited to see what new features and functionalities get included in upcoming releases!
 
-This is my first technical article, I would greatly appreciate any constructive feedback you may have. Feel free to share your thoughts! If you found this helpful and are interested in more Google Maps-related content, I'm happy to write on other functionalities and components. In the coming weeks, you can also expect more blog articles exploring other exciting web technologies.
+---
+
+This is my first technical article! 🥳  
+  
+I would greatly appreciate any constructive feedback you may have. Feel free to share your thoughts! If you found this helpful and are interested in more Google Maps-related content, I'm happy to write on other features or components. In the coming weeks, you can also expect more blog articles exploring exciting web technologies I come across. I hope you had a lovely read. 🤍
