@@ -6,7 +6,7 @@ datePublished: Thu Apr 25 2024 12:25:28 GMT+0000 (Coordinated Universal Time)
 cuid: clvf7vqfs000o09kxewb5c7rz
 slug: how-to-add-google-maps-to-react-app-visgl
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/_SFJhRPzJHs/upload/afa61503cb2ab2b7dfb09ea7c5a5d16f.jpeg
-ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1714047801503/ca9d1181-4e6a-4a8f-80f3-4a9e2d05d5bb.png
+ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1714062240448/f501b787-43f7-4a3c-a7ee-ef131ddcee03.png
 tags: web-development, reactjs, maps, google-maps, tailwind-css, vite, visgl
 
 ---
@@ -124,7 +124,7 @@ In this section, I'll walk you through rendering a simple Google Map in your Rea
     
     We import the `APIProvider` and `Map` components from the library.
     
-2. **Set Up the** `App` **Component:**
+2. **Set Up the**`App`**Component:**
     
     ```typescript
     const App = () => (
@@ -392,6 +392,6 @@ While `vis.gl/react-google-maps` is still in its early stages, I believe it has 
 
 ---
 
-This is my first technical article! 🥳  
-  
+This is my first technical article! 🥳
+
 I would greatly appreciate any constructive feedback you may have. Feel free to share your thoughts! If you found this helpful and are interested in more Google Maps-related content, I'm happy to write on other features or components. In the coming weeks, you can also expect more blog articles exploring exciting web technologies I come across. I hope you had a lovely read. 🤍
