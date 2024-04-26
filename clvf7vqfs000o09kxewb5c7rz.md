@@ -394,4 +394,9 @@ While `vis.gl/react-google-maps` is still in its early stages, I believe it has 
 
 This is my first technical article! 🥳
 
-I would greatly appreciate any constructive feedback you may have. Feel free to share your thoughts! If you found this helpful and are interested in more Google Maps-related content, I'm happy to write on other features or components. In the coming weeks, you can also expect more blog articles exploring exciting web technologies I come across. I hope you had a lovely read. 🤍
+I would greatly appreciate any constructive feedback you may have. Feel free to share your thoughts! If you found this helpful and are interested in more Google Maps-related content, I'm happy to write on other features or components. In the coming weeks, you can also expect more blog articles exploring exciting web technologies I come across. I hope you had a lovely read. 🤍  
+
+<div data-node-type="callout">
+<div data-node-type="callout-emoji">💡</div>
+<div data-node-type="callout-text">I'm also open to new opportunities! If you're looking for a frontend developer experienced with React, Next.js, and Tailwind CSS, you can check out my portfolio for more of my work: <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.victorwilliams.me/" style="pointer-events: none">https://www.victorwilliams.me</a>. I'm currently available for full-time roles, part-time roles, or freelance gigs. Feel free to reach out if you have any projects in mind!</div>
+</div>
