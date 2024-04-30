@@ -13,11 +13,11 @@ tags: web-development, reactjs, maps, google-maps, tailwind-css, vite, visgl
 
 Have you ever felt overwhelmed integrating the Google Maps API into a React project for the first time? Well, I definitely have! Choosing the right library can be daunting, especially when you need specific features like dynamic markers and location search.
 
-In this article, you’ll see a simple example of how to integrate Google Maps into a React project. However, you’ll start by discussing why you might want to do so and some advanced Google Maps features you can use. If you prefer, you can jump ahead to the tutorial — make sure to check out the demo project’s [source code](https://github.com/victorcodess/react-google-maps-demo) as well.
+In this article, you’ll see a simple example of how to integrate Google Maps into a React project. However, we’ll start by discussing why you might want to do so and some advanced Google Maps features you can use. If you prefer, you can jump ahead to the tutorial — make sure to check out the demo project’s [source code](https://github.com/victorcodess/react-google-maps-demo) as well.
 
 ## Using Google Maps in React
 
-There are a number of reasons why you may choose to integrate Google Maps into your React app. You’ll be taking a look at one of the most popular ones. You can use them as a base for other, more complex cases if you desire.
+There are a number of reasons why you may choose to integrate Google Maps into your React app. We’ll be taking a look at one of the most popular ones. You can use them as a base for other, more complex cases if you desire.
 
 * **Enhanced User Experience (UX):** Google Maps is a familiar and user-friendly platform for visualizing locations. Integrating it into your React app allows users to easily explore geographical data, navigate places of interest, and understand spatial relationships.
     
@@ -106,7 +106,7 @@ To use Google Maps features within your React application, you'll need to obtain
 3. **Create an API Key:** In the "Credentials" section of the **Google Maps Platform**, create a new API key. Consider restricting this key to only allow usage for your specific project for better security.
     
 
-**Never commit your API key to a public repository** like Github. Instead, create a `.env.local` file in your project's root directory and add the following line, replacing `<your API key here>` with your actual key:
+**Never commit your API key to a public repository** **like Github**. Instead, create a `.env.local` file in your project's root directory and add the following line, replacing `<your API key here>` with your actual key:
 
 ```typescript
 VITE_REACT_GOOGLE_MAPS_API_KEY=<your API key here>
