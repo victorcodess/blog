@@ -31,7 +31,8 @@ In this article, you'll learn how to implement exit animations using the `exit` 
 <div data-node-type="callout-text">For this guide, we'll use a React-TypeScript project and Tailwind CSS for styling. While these are my preferred choices, you can tailor the setup to your existing project or preferences.</div>
 </div>
 
-**1\. Install Framer Motion:**
+1. **Install Framer Motion:**
+    
 
 In your project directory, install Framer Motion using either npm or yarn:
 
@@ -47,7 +48,8 @@ npm install framer-motion
 yarn add framer-motion
 ```
 
-**2\. Create a basic component:**
+2. **Create a basic component:**
+    
 
 Let's create a simple component to play around with. Inside the `src` folder, create a new file named `MyComponent.js`. Here's a basic structure for our component:
 
@@ -65,7 +67,8 @@ export default MyComponent;
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1715292325360/f551c6e6-3d6b-4bc5-8cdf-68197ff1d08f.png align="center")
 
-**3\. Import Framer Motion:**
+3. **Import Framer Motion:**
+    
 
 To make your component move with Framer Motion, you need to import the `motion` component. Update your `MyComponent.js` file to include this line at the top:
 
@@ -89,7 +92,7 @@ This presents a challenge for basic exit animations with CSS in React. While CSS
 
 Remember, React entirely removes hidden components from the Document Object Model (DOM). This disrupts the animation process if you directly apply exit animations. `AnimatePresence` solves this challenge by acting as a wrapper around your components.
 
-**How to use**`AnimatePresence`**:**
+### **How to use**`AnimatePresence`**:**
 
 1. **Define the Exit Animation:**
     
@@ -158,7 +161,8 @@ This is just a basic example, of course. Framer Motion allows you to animate var
 
 We've explored the basics of defining exit animations with Framer Motion. Now, let's learn some advanced techniques to create better exit animations:
 
-**1\. Fine-tune with Custom Transitions:**
+1. ### **Fine-tune with Custom Transitions:**
+    
 
 The `transition` property within the `exitAnimation` object offers even more control over your animation. You can define custom easing functions to control the speed and flow of the animation:
 
@@ -173,7 +177,8 @@ const exitAnimation = {
 
 Here, we've added the `ease: "easeInOut"` property to the `transition`. This tells the animation to ease in and out smoothly, creating a more natural feel.
 
-**2\. Combining Multiple Animation Properties:**
+2. ### **Combining Multiple Animation Properties:**
+    
 
 Don't limit yourself to a single animation property! Framer Motion allows you to combine multiple properties within your `exitAnimation` object:
 
@@ -190,7 +195,8 @@ const exitAnimation = {
 
 In this example, we're fading out the component (`opacity: 0`), sliding it off-screen to the left (`x: "-100vw"`), and adding a 90-degree clockwise rotation (`rotate: 90`) for a more dramatic exit.
 
-**3\. Delayed Exits for Multiple Elements:**
+3. ### **Delayed Exits for Multiple Elements:**
+    
 
 An exit animation can become even more engaging when applied to multiple elements. Framer Motion offers two techniques to create a cascading or wave-like effect: individual delays and stagger.
 
@@ -280,7 +286,7 @@ A modal component typically consists of two parts:
 * **Modal Content:** The main content area displayed within the modal, often containing information, forms, or interactive elements.
     
 
-**Creating the Modal Component:**
+### **Creating the Modal Component:**
 
 Here's a basic structure for our modal component with Framer Motion:
 
@@ -351,7 +357,7 @@ export default Modal;
 * **Exit State:** When the modal closes, the content animates back to `opacity: 0` (invisible) and `scale: 0` (scaled down), creating a shrinking and fading-out effect.
     
 
-**Adding the Modal to Your Application:**
+### **Adding the Modal to Your Application:**
 
 Now you can integrate this `Modal` component into your application. Here's an example:
 
