@@ -28,7 +28,7 @@ In this article, you'll learn how to implement exit animations using the `exit` 
 
 <div data-node-type="callout">
 <div data-node-type="callout-emoji">💡</div>
-<div data-node-type="callout-text">For this guide, we'll use a React-TypeScript project and Tailwind CSS for styling. While these are my preferred choices, you can tailor the setup to your existing project or preferences.</div>
+<div data-node-type="callout-text">For this guide, we'll use a React-TypeScript project and Tailwind CSS for styling. While these are my preferred choices, you can tailor the setup to your existing project or preferences. To follow along with the guide, you can clone the demo's <a target="_blank" rel="noopener noreferrer nofollow" href="https://github.com/victorcodess/exit-animation-modal" style="pointer-events: none">source code</a> as well.</div>
 </div>
 
 1. **Install Framer Motion:**
@@ -51,7 +51,7 @@ yarn add framer-motion
 2. **Create a basic component:**
     
 
-Let's create a simple component to play around with. Inside the `src` folder, create a new file named `MyComponent.js`. Here's a basic structure for our component:
+Let's create a simple component to play around with. Inside the `src` folder, create a new file named `my-component.tsx`. Here's a basic structure for our component:
 
 ```typescript
 import React from 'react';
@@ -70,7 +70,7 @@ export default MyComponent;
 3. **Import Framer Motion:**
     
 
-To make your component move with Framer Motion, you need to import the `motion` component. Update your `MyComponent.js` file to include this line at the top:
+To make your component move with Framer Motion, you need to import the `motion` component. Update your `my-component.tsx` file to include this line at the top:
 
 ```typescript
 import { motion } from 'framer-motion';
@@ -92,7 +92,7 @@ This presents a challenge for basic exit animations with CSS in React. While CSS
 
 Remember, React entirely removes hidden components from the Document Object Model (DOM). This disrupts the animation process if you directly apply exit animations. `AnimatePresence` solves this challenge by acting as a wrapper around your components.
 
-### **How to use**`AnimatePresence`**:**
+### **How to use** `AnimatePresence`**:**
 
 1. **Define the Exit Animation:**
     
@@ -107,7 +107,7 @@ const exitAnimation = {
 };
 ```
 
-2. **Wrap with AnimatePresence:**
+2. **Wrap with** `AnimatePresence`**:**
     
     Next, we wrap our components with `AnimatePresence`. This ensures that even when a component is hidden, it remains in the DOM momentarily, allowing Framer Motion to complete the exit animation before it's truly removed.
     
@@ -138,11 +138,11 @@ export function App() {
 }
 ```
 
-#### With `AnimatePresence`:
+**With** `AnimatePresence`**:**
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1715293939791/1c72de9a-a8c5-4d3e-8c73-1dcacc5b0a99.gif align="center")
 
-#### Without `AnimatePresence`:
+**Without** `AnimatePresence`**:**
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1715202267718/0a85075f-95d2-4567-a70c-9f7a5b47739b.gif align="center")
 
